@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+h1{
+    color: aqua;
+}
+
+div{
+   height: 20px;
+   margin-bottom: 5px;
+   border: 1px groove black;
+}
+
+#omg{
+    background-color: aqua;
+}
+
+#header{
+    background-color: blueviolet;
+}
+#main{
+    background-color: aquamarine;
+}
+#footer{
+    background-color: chartreuse;
+    width: 200px;
+}
