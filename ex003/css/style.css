@@ -1,5 +1,9 @@
 @charset "UTFS-8";
 
+@font-face{
+    font-family: capybarbas;
+    src: url(../fonts/Cakecafe.ttf);
+}
 :root{
     --cor1:#223740;
     --cor2:#456E73;
@@ -12,17 +16,22 @@
     padding:0 ; 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-header {
-    height:50PX ;                                                                                                                                                                                           
+header{
     background-color: var(--cor1);
-    display: flex;
+    display:flex;
+    flex-direction:row;
+
+}
+#header {
+    display: flex;  
+    max-width: 1500px; 
+    margin: auto;                                                                                                                                                                                      
 }
 
 #logo {
     width:150px ;
     height: 100%;
-    color: blanchedalmond;/* definir a cor da fonte */
+    color: rgb(231, 205, 255);/* definir a cor da fonte */
     font-size: 30px;/* definir tamanho da fonte */
     text-transform: uppercase;/* coloca letra maiuscula */
     display: flex;align-items: center;/* torna os itens imternos em flexiveis*/
@@ -58,6 +67,42 @@ a{
 
 a:hover {
    background-color: var(--cor2);
+}
+
+figure{
+    margin: auto;
+    width: 100%;
+    height: 300px;
+    background-image: url("../imagens/pexels-nikolaos-dimou-1319460.jpg"
+    );
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+
+}
+
+ #text-figure-1{
+    width: 127px;
+    border-bottom: 5px solid rgb(66, 95, 129);
+    color:rgb(30, 33, 34);
+    font-size: 30px;text-transform: uppercase;
+    font-weight: bold;
+    font-family: capybarbas;
+ }
+ #text-figure-2{
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 72px;
+    font-weight:bold ;
+    font-family: varsiy;
+ }
+@media (max-width: 775px) {
+    nav {
+        display: none;
+    }
 }
 
 
