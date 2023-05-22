@@ -14,9 +14,15 @@
 *{
     margin:0 ;
     padding:0 ; 
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+body{
+    position: relative;
+    z-index: -3;
+
 }
 header{
+    height: 70px;
     background-color: var(--cor1);
     display:flex;
     flex-direction:row;
@@ -24,7 +30,7 @@ header{
 }
 #header {
     display: flex;  
-    width: 1500px;
+    width: 90px;
     max-width: 1500px; 
     margin: auto; 
     justify-content: space-evenly;
@@ -32,19 +38,24 @@ header{
 }
 
 #logo {
-    width:150px ;
-    height: 100%;
+    min-width: 300px;
     color: rgb(205, 252, 255);/* definir a cor da fonte */
     font-size: 30px;/* definir tamanho da fonte */
     text-transform: uppercase;/* coloca letra maiuscula */
-    display: flex;align-items: center;/* torna os itens imternos em flexiveis*/
-    flex-direction: row;/* define a direçao se e linha ou coluna */
-    padding: 0 15px 0 15px;
+    display: flex;
+    align-items: center;/* torna os itens imternos em flexiveis*/
+    
+    
 }
 
 #logo img {
     width: 50px
 }
+#logo p {
+margin-left: 10px;
+min-width: 235px;
+}
+
 #botao-menu{
     display: none;
 }
@@ -54,27 +65,22 @@ label[for='botao-menu']{
     cursor: pointer;
     display: none;
 }
-    
 
 nav {
     display: flex;
-    margin-left: auto;
 }
 
-nav > div{  /* maior */
-    margin-left: 30px;
-    display: flex;
-    align-items: center;
-    padding: 0 10px 0 10px;
-}
+
 
 a{
     text-decoration: none;
     text-transform: uppercase; /* letras maiusculas */
     color: azure;
     height: 100%;
+    width:105px ;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0 10px 0 10px;
 }
 
@@ -82,7 +88,7 @@ a:hover {
    background-color: var(--cor2);
 }
 
-figure{
+#baner{
     margin: auto;
     width: 100%;
     height: 300px;
@@ -91,12 +97,26 @@ figure{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content:center ;
+    position: relative;
+    z-index: -2;
 
 }
 
+#backgroundFilter{
+    background-color: black;
+    width:100% ;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text-figure-small{
+    color: #8C4F4F;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
  #text-figure-1{
     width: 127px;
     border-bottom: 5px solid rgb(66, 95, 129);
@@ -114,22 +134,59 @@ figure{
  }
 main{
     position: relative;
+    top: -30px;
     width: 90%;
     max-width: 1500px;
-    height: 500px;
-    border: 1px solid black;
     margin: 0 auto 50px auto;
-    border: 1px solid black;
+    border-top: 3px solid var(--cor3);
+    box-shadow: black;
+    background-color: azure;
 
 }
-main > div{
-    position: absolute;
-    top: 50px;
-    bottom: 50px;
-    left: 100px;
-    height: 100px;
-    width: 100px;
+
+
+.main-section{
+    width: 95%;
+    max-width: 95%;
+    margin:30px auto 40px auto ;
+    height: 300px;
     border: 1px solid black;
+    border-top: 3px solid var(--cor4);
+
+}
+
+.main-section h1 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+#serviços{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+#serviços > div {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+#serviços img {
+    width: 50px;
+    background-color:rgb(31, 31, 146);
+    padding:5px;
+    border-radius:50%;
+}
+#serviços div:hover img{
+    background-color: aqua;
+
+}
+#serviços div:hover img{
+    color: aqua;
 }
 
 
@@ -138,26 +195,29 @@ footer{
     height: 350px;
 }
 
-@media (max-width: 775px) {
+@media (max-width: 1090px) {
     nav {
         
         flex-direction: column;
         position: absolute;
-        width: 80%;
-        top: 100%;
+        width: 90%;
+        top: 70px;
         margin-top: -200%;
-        transition: ;
+        transition: all 1s;
+        z-index: -1;
     }
+
     a{
         width: 100%;
-        background-color: rgb(86, 86, 184);
+        background-color: rgb(86, 153, 184);
+        padding: 0;
 
     }
-    label[ for='botao-menu']{
+    label[for='botao-menu']{
         display: block;
     }
     #botao-menu:checked ~ nav{
-        display: block;
+        margin-top: 0;
     }
         
 
