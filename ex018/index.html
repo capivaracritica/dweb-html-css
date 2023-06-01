@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verificador de idade</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>verificador de idade</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                ano de nacimento: <input type="number" id="input_ano">
+            </p>
+
+            <p>
+                sexo:
+                <input type="radio" name="radsex" id="masculino">
+                <label for="masculino">masculino</label>
+                <input type="radio" name="radsex" id="feminino">
+                 <label for="feminino">feminino</label>
+            </p>
+            <p>
+                <input type="button" value="verificar" onclick="verificar()">
+            </p>
+         </div>
+         <div id="resultado">
+            <p>
+                preencha os dados acima para ver o resultado
+            </p>
+         </div>
+    </section>
+    <footer>
+        <p>
+            &copy; Senac - Desenvolvedor web 
+        </p>
+    </footer>
+    <script src="verificaidade.js"></script>
+</body>
+</html>
